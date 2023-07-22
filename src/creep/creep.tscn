@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhfklma6fbloe"]
+
+[ext_resource type="PackedScene" uid="uid://f872tlst2ayw" path="res://src/grounded_gfx/grounded_gfx.tscn" id="1_dc665"]
+[ext_resource type="Script" path="res://src/creep/creep.gd" id="1_pxpy6"]
+[ext_resource type="Script" path="res://src/components/random_speed.gd" id="2_e1acx"]
+[ext_resource type="Texture2D" uid="uid://cmobmsu1y63i6" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0109.png" id="3_0fkaw"]
+[ext_resource type="Script" path="res://src/components/random_texture.gd" id="4_uobgm"]
+
+[sub_resource type="Resource" id="Resource_846qp"]
+script = ExtResource("2_e1acx")
+_min_speed = 10.0
+_max_speed = 30.0
+
+[sub_resource type="Resource" id="Resource_8hrux"]
+script = ExtResource("4_uobgm")
+_textures = Array[Texture2D]([ExtResource("3_0fkaw")])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttj88"]
+
+[node name="Creep" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_pxpy6")
+_random_speed = SubResource("Resource_846qp")
+_random_texture = SubResource("Resource_8hrux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ttj88")
+
+[node name="GroundedGfx" parent="." instance=ExtResource("1_dc665")]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
