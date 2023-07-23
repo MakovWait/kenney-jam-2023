@@ -64,3 +64,9 @@ func _create_difficulte_increase_timer(wait_time, spawn_delay, spawn_number):
 		_creep_spawn_rate_number = spawn_number
 		_creep_spawn_rate_wait = spawn_delay
 	)
+
+
+func _exit_tree():
+	for creep in _free_creeps:
+		if is_instance_valid(creep):
+			creep.free()

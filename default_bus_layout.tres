@@ -1,0 +1,14 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dtrcvomb3rq4u"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_roauk"]
+resource_name = "Reverb"
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_olfn0"]
+resource_name = "Limiter"
+ceiling_db = -20.0
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectReverb_roauk")
+bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectLimiter_olfn0")
+bus/0/effect/1/enabled = false

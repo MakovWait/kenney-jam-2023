@@ -17,17 +17,23 @@ func _ready() -> void:
 	
 	var items = [
 		Item.new(
-			5,
-			2,
+			1,
+			3,
 			preload("res://assets/kenney_tiny-dungeon/Tiles/tile_0096.png"),
 			func(): spawn_soldier()
 		),
 		Item.new(
-			20,
+			100,
 			10,
 			preload("res://assets/kenney_input-prompts-pixel-16/Tiles/tile_0581.png"),
 			func(): spawn_hand()
-		)
+		),
+		Item.new(
+			2000,
+			10,
+			preload("res://assets/kenney_tiny-dungeon/Tiles/tile_0089.png"),
+			func(): victory()
+		),
 	]
 	
 	for item in items:
@@ -75,6 +81,24 @@ func _random_visible_point() -> Vector2:
 		randf_range(0, visible_rect.size.x),
 		randf_range(0, visible_rect.size.y),
 	) + visible_rect.position
+
+
+func victory():
+	get_tree().paused = true
+	var tween = create_tween()
+	
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	tween.tween_property(%VictoryLabel, "scale", Vector2(1, 1), 1).from(Vector2.ZERO).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+	tween.parallel().tween_callback(func():
+		%VictoryLabel.visible = true
+	)
+	tween.tween_property(%RestartLabel, "scale", Vector2(1, 1), 1).from(Vector2.ZERO).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
+	tween.parallel().tween_callback(func():
+		%RestartLabel.visible = true
+	)
+	
+	%GameOverColorRect.visible = true
+	%PanelContainer.visible = false
 
 
 func _cache_visible_rect():

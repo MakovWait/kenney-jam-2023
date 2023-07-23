@@ -16,7 +16,7 @@ radius = 32.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rpbcx"]
 shader = ExtResource("5_58mg3")
 shader_parameter/original = Color(0.247059, 0.14902, 0.192157, 1)
-shader_parameter/replacement = Color(1, 0.00784314, 0, 1)
+shader_parameter/replacement = Color(0.196078, 0.309804, 0.819608, 1)
 
 [node name="Soldier" instance=ExtResource("1_a3bb3")]
 collision_mask = 4

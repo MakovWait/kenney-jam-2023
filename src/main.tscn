@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://0jjchnwj7vkh"]
+[gd_scene load_steps=20 format=3 uid="uid://0jjchnwj7vkh"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1_0qxqj"]
 [ext_resource type="Script" path="res://src/props_spawner.gd" id="2_3w0gi"]
@@ -18,6 +18,9 @@
 [ext_resource type="Script" path="res://src/restart_label.gd" id="16_3fobh"]
 
 [sub_resource type="Theme" id="Theme_pwoep"]
+default_font = ExtResource("10_kr0kw")
+
+[sub_resource type="Theme" id="Theme_uvjn8"]
 default_font = ExtResource("10_kr0kw")
 
 [sub_resource type="Theme" id="Theme_rvtst"]
@@ -2375,7 +2378,8 @@ position = Vector2(375, -148)
 [node name="RandomProps2D41" type="Marker2D" parent="RandomProps/Houses"]
 position = Vector2(375, -148)
 
-[node name="PlayerHand2" parent="." instance=ExtResource("8_23t7e")]
+[node name="PlayerHand2" parent="." node_paths=PackedStringArray("sound") instance=ExtResource("8_23t7e")]
+sound = NodePath("../AudioStreamPlayer")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
@@ -2461,11 +2465,23 @@ size_flags_vertical = 4
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 36.0
+offset_top = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="RestartLabel" type="Label" parent="CanvasLayer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+
+[node name="VictoryLabel" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_uvjn8")
+text = "victory!!!"
+
+[node name="RestartLabel" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
 unique_name_in_owner = true
 process_mode = 2
 visible = false
@@ -2473,6 +2489,8 @@ layout_mode = 2
 theme = SubResource("Theme_rvtst")
 text = "(r)estart"
 script = ExtResource("16_3fobh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="creep_killed" from="Creeps" to="." method="_on_creeps_creep_killed"]
 [connection signal="current_inhabitants_number_changed" from="Inhabitants" to="PropsSpawner" method="_on_inhabitants_current_inhabitants_number_changed"]

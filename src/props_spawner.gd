@@ -2,8 +2,8 @@ extends Node
 
 @export var _house_propses: Array[PackedScene] = []
 @export var _rest_propses: Array[PackedScene] = []
-@export var _max_spawn_radius = 400
-@export var _min_spawn_radius = 0
+@export var _max_spawn_radius = 500
+@export var _min_spawn_radius = 200
 
 @onready var _random_props: Node2D = $"../RandomProps"
 @onready var _grounded_entities: Node2D = %GroundedEntities
@@ -30,7 +30,7 @@ func _ready() -> void:
 
 
 func _on_inhabitants_current_inhabitants_number_changed(value) -> void:
-	_current_spawn_radius = lerp(_min_spawn_radius, _max_spawn_radius, value / 50)
+	_current_spawn_radius = lerp(_min_spawn_radius, _max_spawn_radius, value / 10)
 	_current_spawn_radius_squared = _current_spawn_radius * _current_spawn_radius
 
 
