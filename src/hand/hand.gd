@@ -33,7 +33,7 @@ func slam():
 
 func _smash():
 	for area in get_overlapping_areas():
-		area.smash()
+		area.take_hit()
 
 
 func _set_gfx_skew(value):
@@ -44,6 +44,3 @@ func _set_gfx_skew(value):
 
 func _process(delta: float) -> void:
 	_shadow_sprite.scale = Vector2.ONE * lerp(1.0, 0.7, _body_sprite.position.length() / _idle_pos.length())
-	global_position = get_global_mouse_position()
-	if Input.is_action_just_pressed("slam"):
-		slam()

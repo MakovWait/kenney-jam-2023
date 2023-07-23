@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://0d0g7uppw6c7"]
+[gd_scene load_steps=16 format=3 uid="uid://0d0g7uppw6c7"]
 
 [ext_resource type="Script" path="res://src/inhabitant/inhabitant.gd" id="1_5uq0k"]
-[ext_resource type="Texture2D" uid="uid://dfrjc5run3j4t" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0096.png" id="2_7kppe"]
 [ext_resource type="Script" path="res://src/components/random_speed.gd" id="2_ys7nu"]
-[ext_resource type="Texture2D" uid="uid://dq8oeb4d6xh4e" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0097.png" id="3_0lmp1"]
-[ext_resource type="Texture2D" uid="uid://dl66ecqmrfy23" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0098.png" id="4_luw5q"]
 [ext_resource type="Texture2D" uid="uid://preap872uk8c" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0099.png" id="5_ye44x"]
+[ext_resource type="Texture2D" uid="uid://c0rx23fcvrkar" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0086.png" id="6_62wuq"]
 [ext_resource type="Texture2D" uid="uid://dirlwqr6g3it0" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0100.png" id="6_ojab6"]
+[ext_resource type="Texture2D" uid="uid://dvl8k2kmf8e4v" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0085.png" id="7_aoess"]
 [ext_resource type="Texture2D" uid="uid://c57v0t2bpj3gr" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0112.png" id="7_i0kxh"]
+[ext_resource type="Texture2D" uid="uid://cjprfsjwyrp38" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0088.png" id="8_3ob1m"]
 [ext_resource type="PackedScene" uid="uid://f872tlst2ayw" path="res://src/grounded_gfx/grounded_gfx.tscn" id="8_xc1fx"]
 [ext_resource type="Script" path="res://src/components/random_texture.gd" id="9_xo2uf"]
+[ext_resource type="Shader" path="res://src/grounded_gfx/grounded_gfx.gdshader" id="11_h0fcm"]
 
 [sub_resource type="Resource" id="Resource_ktqw0"]
 script = ExtResource("2_ys7nu")
@@ -18,9 +19,14 @@ _max_speed = 30.0
 
 [sub_resource type="Resource" id="Resource_qclxt"]
 script = ExtResource("9_xo2uf")
-_textures = Array[Texture2D]([ExtResource("2_7kppe"), ExtResource("3_0lmp1"), ExtResource("4_luw5q"), ExtResource("5_ye44x"), ExtResource("6_ojab6"), ExtResource("7_i0kxh")])
+_textures = Array[Texture2D]([ExtResource("5_ye44x"), ExtResource("6_ojab6"), ExtResource("7_i0kxh"), ExtResource("6_62wuq"), ExtResource("7_aoess"), ExtResource("8_3ob1m")])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bsg1f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s4rt2"]
+shader = ExtResource("11_h0fcm")
+shader_parameter/original = Color(0.247059, 0.14902, 0.192157, 1)
+shader_parameter/replacement = Color(1, 0.847059, 0, 1)
 
 [node name="Inhabitant" type="Area2D"]
 collision_layer = 2
@@ -34,3 +40,9 @@ _wander_radius = 64
 shape = SubResource("CircleShape2D_bsg1f")
 
 [node name="GroundedGfx" parent="." instance=ExtResource("8_xc1fx")]
+position = Vector2(2.08165e-12, -8)
+
+[node name="Body" parent="GroundedGfx" index="1"]
+material = SubResource("ShaderMaterial_s4rt2")
+
+[editable path="GroundedGfx"]

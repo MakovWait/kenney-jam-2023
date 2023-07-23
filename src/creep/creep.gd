@@ -1,6 +1,6 @@
 extends Area2D
 
-signal smashed
+signal killed
 
 @export var _random_speed: RandomSpeed
 @export var _random_texture: RandomTexture2D
@@ -16,8 +16,8 @@ func _ready() -> void:
 	_speed = _random_speed.get_value()
 
 
-func smash():
-	smashed.emit()
+func take_hit():
+	killed.emit()
 
 
 func init_creep(spawn_position: Vector2, target_position: Vector2):
@@ -30,4 +30,4 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
-	area.take_bite()
+	area.take_hit()

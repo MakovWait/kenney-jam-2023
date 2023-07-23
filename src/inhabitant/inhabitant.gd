@@ -1,7 +1,6 @@
 extends Area2D
 
-signal smashed
-signal eaten
+signal killed
 
 @export var _random_speed: RandomSpeed
 @export var _random_texture: RandomTexture2D
@@ -33,12 +32,8 @@ func _ready() -> void:
 	tween.set_loops()
 
 
-func smash():
-	smashed.emit()
-
-
-func take_bite():
-	eaten.emit()
+func take_hit():
+	killed.emit()
 
 
 func set_spawn_position(value: Vector2):

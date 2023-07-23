@@ -8,7 +8,7 @@ radius = 7.0
 height = 22.0
 
 [node name="Hand" type="Area2D"]
-collision_mask = 6
+collision_mask = 4
 script = ExtResource("1_8uih3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://2o2a528l1653"]
+
+[ext_resource type="PackedScene" uid="uid://cwdixebt0abuc" path="res://src/hand/hand.tscn" id="1_2d6x3"]
+[ext_resource type="Script" path="res://src/hand/auto_hand.gd" id="2_wrd2d"]
+
+[node name="AutoHand" instance=ExtResource("1_2d6x3")]
+script = ExtResource("2_wrd2d")
+_speed = 100

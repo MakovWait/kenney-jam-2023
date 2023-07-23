@@ -1,0 +1,55 @@
+[gd_scene load_steps=41 format=3 uid="uid://btrrxdm7pw1po"]
+
+[ext_resource type="Texture2D" uid="uid://c204ry300rlma" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat25.png" id="1_df6bi"]
+[ext_resource type="Script" path="res://src/props/splat.gd" id="1_uejtr"]
+[ext_resource type="Texture2D" uid="uid://blasmriuv7efm" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat00.png" id="3_buiq7"]
+[ext_resource type="Texture2D" uid="uid://bccjikoorhnxp" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat01.png" id="4_mc3w4"]
+[ext_resource type="Texture2D" uid="uid://ba7n01c5y6smi" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat02.png" id="5_py3c5"]
+[ext_resource type="Texture2D" uid="uid://b645oprxhelt6" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat03.png" id="6_6ehqo"]
+[ext_resource type="Texture2D" uid="uid://0afr7t2r5etd" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat04.png" id="7_05m0f"]
+[ext_resource type="Texture2D" uid="uid://dnhbke1nphxfb" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat05.png" id="8_kssc5"]
+[ext_resource type="Texture2D" uid="uid://beapk3upm2w27" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat06.png" id="9_la1rn"]
+[ext_resource type="Texture2D" uid="uid://dgrxalwwqtfxa" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat07.png" id="10_26jlx"]
+[ext_resource type="Texture2D" uid="uid://coouqsc8k7g80" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat08.png" id="11_abtcc"]
+[ext_resource type="Texture2D" uid="uid://coq8iy62sm3ol" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat09.png" id="12_5yhd5"]
+[ext_resource type="Texture2D" uid="uid://b67a26mnecnnm" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat10.png" id="13_ncuf6"]
+[ext_resource type="Texture2D" uid="uid://c373ghay5jnxv" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat11.png" id="14_1vmbc"]
+[ext_resource type="Texture2D" uid="uid://dy7mhxcsoq8iq" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat12.png" id="15_f3ffo"]
+[ext_resource type="Texture2D" uid="uid://bknm1dy46vxsf" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat13.png" id="16_4x1a6"]
+[ext_resource type="Texture2D" uid="uid://b2etifa3lmi1b" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat14.png" id="17_luvrb"]
+[ext_resource type="Texture2D" uid="uid://be1ywltp0kt7u" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat15.png" id="18_mendp"]
+[ext_resource type="Texture2D" uid="uid://r1cse65jrd3g" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat16.png" id="19_36h5n"]
+[ext_resource type="Texture2D" uid="uid://rl2ph27fbr3u" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat17.png" id="20_hhdmf"]
+[ext_resource type="Texture2D" uid="uid://ihtd0xd7m77b" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat18.png" id="21_qplyr"]
+[ext_resource type="Texture2D" uid="uid://dubdwsocq08ms" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat19.png" id="22_2sf4l"]
+[ext_resource type="Texture2D" uid="uid://18oq1wb3jpyt" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat20.png" id="23_elyna"]
+[ext_resource type="Texture2D" uid="uid://belgfhl7ik2q" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat21.png" id="24_7misd"]
+[ext_resource type="Texture2D" uid="uid://bn2g0o5gtynan" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat22.png" id="25_pjqop"]
+[ext_resource type="Texture2D" uid="uid://bnh6ypaw2gsgh" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat23.png" id="26_q2xps"]
+[ext_resource type="Texture2D" uid="uid://btdx2g8lmds7l" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat24.png" id="27_bqmba"]
+[ext_resource type="Texture2D" uid="uid://bf4xe3n4lk77" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat26.png" id="28_5i08e"]
+[ext_resource type="Texture2D" uid="uid://ds5fd6qdtp6jc" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat27.png" id="29_03uha"]
+[ext_resource type="Texture2D" uid="uid://mgx3o0cfve0c" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat28.png" id="30_6cjl3"]
+[ext_resource type="Texture2D" uid="uid://ci0jurjyomhyu" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat29.png" id="31_mm6uw"]
+[ext_resource type="Texture2D" uid="uid://tr3qg25cf8ev" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat30.png" id="32_enrqp"]
+[ext_resource type="Texture2D" uid="uid://3ur3x1hrmfkw" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat31.png" id="33_1cng6"]
+[ext_resource type="Texture2D" uid="uid://d3lwvy8i3tn0m" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat32.png" id="34_r7rap"]
+[ext_resource type="Texture2D" uid="uid://bo5avjskhfcl5" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat33.png" id="35_2286y"]
+[ext_resource type="Texture2D" uid="uid://s8ma2kalrlu3" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat34.png" id="36_5yj2f"]
+[ext_resource type="Texture2D" uid="uid://dhb3ci0tlh2fe" path="res://assets/kenney_splat-pack/PNG/Default (256px)/splat35.png" id="37_p1nat"]
+[ext_resource type="Script" path="res://src/components/random_texture.gd" id="38_tqibl"]
+[ext_resource type="PackedScene" uid="uid://dt0e66uj0r187" path="res://src/props/appear.tscn" id="39_yntnu"]
+
+[sub_resource type="Resource" id="Resource_ixhdc"]
+script = ExtResource("38_tqibl")
+_textures = Array[Texture2D]([ExtResource("3_buiq7"), ExtResource("4_mc3w4"), ExtResource("5_py3c5"), ExtResource("6_6ehqo"), ExtResource("7_05m0f"), ExtResource("8_kssc5"), ExtResource("9_la1rn"), ExtResource("10_26jlx"), ExtResource("11_abtcc"), ExtResource("12_5yhd5"), ExtResource("13_ncuf6"), ExtResource("14_1vmbc"), ExtResource("15_f3ffo"), ExtResource("16_4x1a6"), ExtResource("17_luvrb"), ExtResource("18_mendp"), ExtResource("19_36h5n"), ExtResource("20_hhdmf"), ExtResource("21_qplyr"), ExtResource("22_2sf4l"), ExtResource("23_elyna"), ExtResource("24_7misd"), ExtResource("25_pjqop"), ExtResource("26_q2xps"), ExtResource("27_bqmba"), ExtResource("1_df6bi"), ExtResource("28_5i08e"), ExtResource("29_03uha"), ExtResource("30_6cjl3"), ExtResource("31_mm6uw"), ExtResource("32_enrqp"), ExtResource("33_1cng6"), ExtResource("34_r7rap"), ExtResource("35_2286y"), ExtResource("36_5yj2f"), ExtResource("37_p1nat")])
+
+[node name="Splat" type="Sprite2D"]
+modulate = Color(0.909804, 0.270588, 0.215686, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_df6bi")
+script = ExtResource("1_uejtr")
+_random_texture = SubResource("Resource_ixhdc")
+
+[node name="Appear" parent="." instance=ExtResource("39_yntnu")]
+_target_scale = Vector2(0.1, 0.1)

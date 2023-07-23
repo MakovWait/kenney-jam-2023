@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt0e66uj0r187"]
+
+[ext_resource type="Script" path="res://src/props/appear.gd" id="1_4uiw0"]
+
+[node name="Appear" type="Node"]
+script = ExtResource("1_4uiw0")

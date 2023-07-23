@@ -1,0 +1,18 @@
+[gd_scene load_steps=7 format=3 uid="uid://dtntspxp5e4rk"]
+
+[ext_resource type="Texture2D" uid="uid://k6asat8lhq23" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0065.png" id="1_1g0d5"]
+[ext_resource type="Script" path="res://src/props/monument.gd" id="2_qv538"]
+[ext_resource type="PackedScene" uid="uid://dt0e66uj0r187" path="res://src/props/appear.tscn" id="3_fuvi2"]
+[ext_resource type="Texture2D" uid="uid://d4ku8vv0k3arb" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0064.png" id="3_ge81a"]
+[ext_resource type="Script" path="res://src/components/random_texture.gd" id="5_qnbo8"]
+
+[sub_resource type="Resource" id="Resource_ucxao"]
+script = ExtResource("5_qnbo8")
+_textures = Array[Texture2D]([ExtResource("3_ge81a")])
+
+[node name="monument" type="Sprite2D"]
+texture = ExtResource("1_1g0d5")
+script = ExtResource("2_qv538")
+_random_texture = SubResource("Resource_ucxao")
+
+[node name="Appear" parent="." instance=ExtResource("3_fuvi2")]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://psf53o4u4jl"]
+
+[ext_resource type="PackedScene" uid="uid://bygln0wjmgixt" path="res://src/props/house2.tscn" id="1_3lxrf"]
+
+[node name="House" instance=ExtResource("1_3lxrf")]
+y_sort_enabled = true
+
+[node name="TileMap" parent="." index="0"]
+y_sort_enabled = true
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(-131072, 524288, 7, -65536, 524288, 8, -2, 524288, 4, -65538, 524288, 3, -65537, 589824, 3, -131071, 589824, 3, -131070, 655360, 3, -65534, 655360, 4, -65535, 720896, 10, -1, 655360, 10)

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpwkxygonisxa"]
+
+[ext_resource type="Script" path="res://src/props/runtime_shadow.gd" id="1_d73il"]
+
+[node name="RuntimeShadow" type="Node2D"]
+script = ExtResource("1_d73il")
+_color = Color(0, 0, 0, 0.117647)
